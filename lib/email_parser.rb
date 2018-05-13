@@ -17,10 +17,10 @@ def parse
   #binding.pry
   #go through the array and split up the emails.
   #collect all of the emails then seperate with " "
-  emails.split.collect do |address|
+  new_emails= emails.split.collect do |address|
     address.split(',')
 
   #removes duplicate emails
-end.flatten.uniq
+return new_emails.uniq
 end
 end
