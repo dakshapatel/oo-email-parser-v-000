@@ -22,5 +22,5 @@ def parse
 
   #removes duplicate emails
 return new_emails.uniq
-end
+
 end
