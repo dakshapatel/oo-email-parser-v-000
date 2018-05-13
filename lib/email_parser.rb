@@ -20,6 +20,6 @@ def parse
   emails.split.collect {|address| address.split(',')}
 
   #removes duplicate emails
- new_emails.uniq
+ parse.uniq
 end
 end
