@@ -14,6 +14,6 @@ class EmailParser
     @parsedEmails = rawEmailsString.split(',')
 
     return @parsedEmails.uniq
-    
+
   end
 end
