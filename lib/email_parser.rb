@@ -17,7 +17,7 @@ def parse
   #binding.pry
   #go through the array and split up the emails.
   #collect all of the emails then seperate with " "
-  new_emails= emails.split.collect {|address| address.split(',')}
+  emails.split.collect {|address| address.split(',')}
 
   #removes duplicate emails
  new_emails.uniq
