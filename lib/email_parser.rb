@@ -2,18 +2,25 @@
 # emails. The parse method on the class should separate them into
 # unique email addresses. The delimiters to support are commas (',')
 # or whitespace (' ').
+require 'pry'
+
 class EmailParser
+#Use an attr_accessor to set and get the list of emails
+attr_accessor :emails
 
-  attr_accessor :rawEmailsString
+def initialize (emails)
+  @emails = emails
+end
 
-  def initialize(rawEmailsString)
-    @rawEmailsString = rawEmailsString
-  end
 
-  def parse
-    @parsedEmails = rawEmailsString.split(',')
+def parse
+  binding.pry
+  #go through the array and split up the emails.
+  #collect all of the emails then seperate with " "
+  emails.split.collect do |address|
+    address.split(',')
 
-    return @parsedEmails.uniq
-
-  end
+  #removes duplicate emails
+end.flatten.uniq
+end
 end
