@@ -21,6 +21,6 @@ def parse
     address.split(',')
 
   #removes duplicate emails
-return new_emails.uniq
-
+return new_emails
+end
 end
